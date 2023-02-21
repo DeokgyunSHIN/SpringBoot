@@ -30,3 +30,22 @@ gradle 파일안에  dependencies 곳에 적어주고 lombok을 쓰겠다고 설
 
 <img width="1350" alt="스크린샷 2023-02-21 오후 10 51 54" src="https://user-images.githubusercontent.com/104719555/220363921-1a177c4a-6379-4c60-b1cb-23981ad36998.png">
 
+<br>
+<br>
+<br>
+<br>
+
+
+### @toString
+
+<img width="610" alt="스크린샷 2023-02-21 오후 10 55 08" src="https://user-images.githubusercontent.com/104719555/220364639-eb4c9376-7d9e-4f47-8638-9601935657e0.png">
+
+toString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저기에 필드가 추가가 되면 지우고 다시 toString 자동추가 단축키를 써서 메소드를 생성해주거나 
+
+직접 추가해줘야 하는 불편함이 있다. 이럴떄는 그냥 클래스 위에 @toString 을 적어주면 된다.
+
+<img width="1332" alt="스크린샷 2023-02-21 오후 10 57 41" src="https://user-images.githubusercontent.com/104719555/220365239-6adb125f-07ce-4c4e-bf82-1b20e1739d08.png">
+
+위의 사진처럼 어노테이션을 클래스 위에 걸어주고 쓰면 자동으로 만들어주기 떄문에 필드가 추가 되더라도 다시 설정할 필요없이 쓸수 있다.
+
+
