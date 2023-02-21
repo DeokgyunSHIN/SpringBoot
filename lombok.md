@@ -49,3 +49,36 @@ toString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저�
 위의 사진처럼 어노테이션을 클래스 위에 걸어주고 쓰면 자동으로 만들어주기 떄문에 필드가 추가 되더라도 다시 설정할 필요없이 쓸수 있다.
 
 
+<br>
+<br>
+<br>
+<br>
+
+### @NonNull
+
+쉽게 말하면 Null이 들어갈수 없다느 것이다. 필드에....
+
+만약에 설정후 null 일 경우는 NullPointException 이 발생한다.
+
+
+<br>
+<br>
+<br>
+<br>
+
+### @NoArgsConstructor, @AllArgsConstructor, @RequiredArgsConstrutor
+
+ @NoArgsConstructor -> 뜻은 매개변수가 없는 생성자를 구현 한다.
+ 
+ <img width="319" alt="스크린샷 2023-02-21 오후 11 17 25" src="https://user-images.githubusercontent.com/104719555/220369898-8aac213a-68aa-49fe-b0fc-aa166c5709fe.png">
+
+순수 자바 코드를 보게 되면 매개변수가 없는 생성자이다. @NoArgsConstructor 붙여주면 굳이 생성자를 만들어줄 필요없이 쓸수 있다. 
+ 
+ <img width="341" alt="스크린샷 2023-02-21 오후 11 19 24" src="https://user-images.githubusercontent.com/104719555/220370313-baa69da9-2830-4079-a50e-e70392f98709.png">
+
+ 
+ @AllArgsConstructor -> 클래스 안에 있는 모든 필드를 매개변수로 갖는 생성자를 구현한다.
+ 
+ @RequiredArgsConstrutor -> final 또는 @NonNull가 있는 필드가 포함된 생성자를 구현한다.
+ 
+ 
