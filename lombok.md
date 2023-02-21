@@ -36,11 +36,11 @@ gradle 파일안에  dependencies 곳에 적어주고 lombok을 쓰겠다고 설
 <br>
 
 
-### @toString
+### @ToString
 
 <img width="610" alt="스크린샷 2023-02-21 오후 10 55 08" src="https://user-images.githubusercontent.com/104719555/220364639-eb4c9376-7d9e-4f47-8638-9601935657e0.png">
 
-toString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저기에 필드가 추가가 되면 지우고 다시 toString 자동추가 단축키를 써서 메소드를 생성해주거나 
+ToString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저기에 필드가 추가가 되면 지우고 다시 toString 자동추가 단축키를 써서 메소드를 생성해주거나 
 
 직접 추가해줘야 하는 불편함이 있다. 이럴떄는 그냥 클래스 위에 @toString 을 적어주면 된다.
 
@@ -66,7 +66,7 @@ toString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저�
 <br>
 <br>
 
-### @NoArgsConstructor, @AllArgsConstructor, @RequiredArgsConstrutor
+### @NoArgsConstructor, @AllArgsConstructor, @RequiredArgsConstructor
 
  @NoArgsConstructor -> 뜻은 매개변수가 없는 생성자를 구현 한다.
  
@@ -79,6 +79,48 @@ toString 또한 메소드를 생성해서 만들어줘 주었다. 만약에 저�
  
  @AllArgsConstructor -> 클래스 안에 있는 모든 필드를 매개변수로 갖는 생성자를 구현한다.
  
- @RequiredArgsConstrutor -> final 또는 @NonNull가 있는 필드가 포함된 생성자를 구현한다.
+ 처음 모든 필드를 매개변수로 같은 생성자를 만들 때는 
+ 
+ <img width="668" alt="스크린샷 2023-02-21 오후 11 28 02" src="https://user-images.githubusercontent.com/104719555/220372472-149b2c44-324a-48b9-8942-8a43155d3eef.png">
+
+위의 사진 처럼 만들어주었다. 
+
+하지먄 여기서 @AllArgsConstructor를 붙여주면 
+
+<img width="1293" alt="스크린샷 2023-02-21 오후 11 30 10" src="https://user-images.githubusercontent.com/104719555/220372821-8bbfb42a-1334-4cd7-aae7-d4def53c6839.png">
+
+내가 생성자를 만들어줄 필요없이 쓸수 있다.
+
+또한 내가 필드를 추가 하더라도 변경하거나 수정할 필요없이 편안하게 쓸수 있다. 
+내
+
+ @RequiredArgsConstructor -> final 또는 @NonNull가 있는 필드가 포함된 생성자를 구현한다.
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+ ### @Data
+ 
+ @Data는 @Getter/@Setter/@ToString/@EqualsAndHashCode/@RequiredArgsConstructor를 한번에 쓸수 있는 기능이다.
+ 
+ <img width="1325" alt="스크린샷 2023-02-21 오후 11 39 03" src="https://user-images.githubusercontent.com/104719555/220375028-ff490ca0-5001-4769-8f32-985d9b15a1ce.png">
+
+ @Data를 하게 되면 어노테이션을 덕지덕지 안 붙여도 쓸수 있는것 을 알 수 있다.
  
  
+  <br>
+ <br>
+ <br>
+ <br>
+ 
+ ###  @Builder
+ 
+  빌더 패턴은 디자인 패턴 중 하나로 생성자에 매개별수가 많을 때 많이 쓴다 .
+  
+  <img width="1338" alt="스크린샷 2023-02-21 오후 11 43 40" src="https://user-images.githubusercontent.com/104719555/220376152-2ff19ca8-1cf4-45f5-aae3-55ed1c8c5fd6.png">
+
+ 위에 사진은 물론 필드의 갯수가 3개 밖에 안되지만  빌더 패턴을 구하는 코드를 만들고 하기에는 많은 번거러움이 있지만 
+ 
+ @Builder를 사용하게 되면 간편하게 쓸수 있다.
