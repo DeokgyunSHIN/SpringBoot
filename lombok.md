@@ -1,4 +1,4 @@
-# lombok
+# lombok ( 많은 어노테이션이 있지만 지금 사용 중인 것들 정리 !! ) ((ex) 추가적으로 쓰게 되다면 정리 할 예정 )
 
 > lombok은 java 기반으로 Getter, Setter, toString 등등 필요한 메소드들을 간편하게 사용 할수 있게 해주는 라이브러리이다.
 
